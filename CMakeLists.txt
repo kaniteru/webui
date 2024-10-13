@@ -63,7 +63,7 @@ set_target_properties(webui_static PROPERTIES
     OUTPUT_NAME ${WEBUI_OUT_LIB_NAME}-static
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/dist")
 target_link_libraries(webui_static PRIVATE civetweb)
-target_include_directories(webui_static PUBLIC "${CMAKE_SOURCE_DIR)/include")
+target_include_directories(webui_static PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
 add_library(webui_dynamic SHARED ${SOURCE_FILES})
 set_target_properties(webui_dynamic PROPERTIES
@@ -71,7 +71,7 @@ set_target_properties(webui_dynamic PROPERTIES
     PREFIX ""
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/dist")
 target_link_libraries(webui_dynamic PRIVATE civetweb)
-target_include_directories(webui_dynamic PUBLIC "${CMAKE_SOURCE_DIR)/include")
+target_include_directories(webui_dynamic PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
 # Install targets
 install(TARGETS webui_static webui_dynamic
