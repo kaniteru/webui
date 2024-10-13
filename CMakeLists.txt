@@ -79,4 +79,6 @@ install(DIRECTORY include/ DESTINATION include)
 # Install targets
 install(TARGETS webui_static webui_dynamic
     ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib)
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+)
