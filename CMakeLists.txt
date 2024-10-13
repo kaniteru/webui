@@ -71,14 +71,13 @@ set_target_properties(webui_dynamic PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/dist")
 target_link_libraries(webui_dynamic PRIVATE civetweb)
 
-export(TARGETS webui_static webui_dynamic FILE WebUILibraryConfig.cmake)
+#export(TARGETS webui_static webui_dynamic FILE WebUILibraryConfig.cmake)
 
 # Install directory
-install(DIRECTORY include/ DESTINATION include)
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include
 
 # Install targets
 install(TARGETS webui_static webui_dynamic
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
 )
