@@ -75,3 +75,5 @@ target_link_libraries(webui_dynamic PRIVATE civetweb)
 install(TARGETS webui_static webui_dynamic
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib)
+
+install(DIRECTORY include DESTINATION .)
