@@ -76,4 +76,5 @@ install(TARGETS webui_static webui_dynamic
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib)
 
-install(DIRECTORY include DESTINATION .)
+# Install directory
+install(DIRECTORY include/ DESTINATION include)
